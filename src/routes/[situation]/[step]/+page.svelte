@@ -47,7 +47,7 @@
 
 	const resetAnswers = () => {
 		answers = [];
-		isRight = false;
+		isRight = null;
 	};
 
 	let shuffled = $derived(

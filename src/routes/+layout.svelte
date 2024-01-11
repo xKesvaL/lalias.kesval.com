@@ -10,10 +10,15 @@
 	import { setupViewTransition } from 'sveltekit-view-transition';
 	import { BRAND } from '$lib/config';
 	import Header from '$lib/containers/layout/Header.svelte';
+	import { sidebarOpen } from '$lib/states/common.svelte';
+	import { untrack } from 'svelte';
 
 	nprogress.configure({ easing: 'ease', minimum: 0.2, speed: 600 });
 	$effect(() => {
 		$navigating ? nprogress.start() : nprogress.done();
+		untrack(() => {
+			$sidebarOpen = false;
+		});
 	});
 
 	setupViewTransition();
