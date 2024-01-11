@@ -6,15 +6,17 @@
 		class?: string;
 		children?: Snippet;
 		href?: string;
+		vtn?: string;
 	}
 
-	const { class: classes, children, href } = $props<Props>();
+	const { class: classes, children, href, vtn } = $props<Props>();
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'div'}
 	{href}
 	class={cn('rounded-lg bg-card p-4 shadow-md', classes)}
+	style="view-transition-name: {vtn};"
 >
 	{#if children}
 		{@render children()}
