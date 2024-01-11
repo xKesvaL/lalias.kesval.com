@@ -13,10 +13,12 @@
     "postinstall": "paraglide-js compile --project ./project.inlang"
   },
   "devDependencies": {
+    "@formkit/auto-animate": "^0.8.1",
     "@inlang/paraglide-js": "1.1.1",
     "@inlang/paraglide-js-adapter-vite": "^1.2.1",
     "@internationalized/date": "^3.5.1",
     "@kesval/design": "^4.1.2",
+    "@neoconfetti/svelte": "^2.2.1",
     "@sveltejs/adapter-vercel": "^4.0.4",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -33,7 +35,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
     "formsnap": "^0.4.2",
-    "lucide-svelte": "^0.309.0",
+    "lucide-svelte": "latest",
     "mode-watcher": "^0.1.2",
     "nprogress": "^0.2.0",
     "postcss": "^8.4.32",

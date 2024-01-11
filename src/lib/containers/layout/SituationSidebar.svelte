@@ -3,6 +3,8 @@
 	import { SITUATIONS } from '$lib/DATA';
 	import { route } from '$lib/ROUTES';
 	import Card from '$lib/components/base/Card.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
+	import ArrowLeft from 'lucide-svelte/icons/arrow-left';
 
 	interface Props {
 		steps: (typeof SITUATIONS)[string]['steps'];
@@ -12,7 +14,18 @@
 	let { steps, situation } = $props<Props>();
 </script>
 
-<Card class="m-4 flex h-[calc(100vh-8rem)] w-52 flex-col gap-2 p-2" vtn="sidebar">
+<Card class="m-4 flex h-[calc(100vh-8rem)] w-52 flex-shrink-0 flex-col gap-2 p-2" vtn="sidebar">
+	<Button
+		class="flex h-14 items-center justify-start gap-3 pl-3 text-lg font-bold hover:bg-muted/30 hover:text-muted-foreground"
+		href={route('/')}
+		variant="ghost"
+	>
+		<ArrowLeft class="h-6 w-6" />
+		<span>
+			{SITUATIONS[situation].name}
+		</span>
+	</Button>
+	<hr />
 	{#each Object.keys(steps) as step}
 		<a
 			class="w-full rounded-md p-4 transition {$page.url.pathname === `/${situation}/${step}`
