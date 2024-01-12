@@ -18,7 +18,8 @@ const PAGES = {
   },
   "/[situation]/success": (params: { situation: (string | number) }) => {
     return `/${params.situation}/success`
-  }
+  },
+  "/about": `/about`
 }
 
 /**
@@ -142,7 +143,7 @@ export function route<T extends keyof AllTypes>(key: T, ...params: any[]): strin
 * ```
 */
 export type KIT_ROUTES = {
-  PAGES: { '/': never, '/[situation]': 'situation', '/[situation]/[step]': 'situation' | 'step', '/[situation]/success': 'situation' }
+  PAGES: { '/': never, '/[situation]': 'situation', '/[situation]/[step]': 'situation' | 'step', '/[situation]/success': 'situation', '/about': never }
   SERVERS: Record<string, never>
   ACTIONS: Record<string, never>
   LINKS: Record<string, never>
