@@ -15,7 +15,23 @@
 			</h2>
 			<div class="flex items-center gap-2 text-xl">
 				<span class="flex items-center gap-2">
-					<StepForward class="h-6 w-6" />
+					<div class="h-6 w-6">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-chevrons-right"
+							width="100%"
+							height="100%"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M7 7l5 5l-5 5" /><path
+								d="M13 7l5 5l-5 5"
+							/></svg
+						>
+					</div>
 					{Object.keys(SITUATIONS[situation].steps).length} steps
 				</span>
 			</div>

@@ -228,7 +228,7 @@ const SITUATIONS: Situations = {
 				words: ['room', 'making', 'taking', 'door']
 			},
 			room_rendering: {
-				name: 'Room rendering',
+				name: 'Room returning',
 				pov: 'customer',
 				answers: ['leaving', 'when', 'back'],
 				base_line: 'Of course, I need the keys for a new client at 11am tomorrow.',

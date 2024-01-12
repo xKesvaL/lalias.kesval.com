@@ -18,7 +18,7 @@
 <Card
 	class="absolute inset-0 top-24 z-10 m-2 mr-0 flex h-[calc(100vh-7rem)] w-[calc(100vw-1rem)] flex-shrink-0 md:m-4 {$sidebarOpen
 		? 'translate-x-0'
-		: '-translate-x-[150%]'} flex-col gap-2 p-2 transition md:relative md:h-[calc(100vh-8rem)] md:w-52 md:translate-x-0"
+		: '-translate-x-[150%]'} flex-col gap-2 p-2 transition md:relative md:top-0 md:mr-0 md:h-[calc(100vh-8rem)] md:w-52 md:translate-x-0"
 	vtn="sidebar"
 >
 	<Button
@@ -26,7 +26,23 @@
 		href={route('/')}
 		variant="ghost"
 	>
-		<ArrowLeft class="h-6 w-6" />
+		<div class="h-6 w-6">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="icon icon-tabler icon-tabler-arrow-left"
+				width="100%"
+				height="100%"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				fill="none"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M5 12l14 0" /><path
+					d="M5 12l6 6"
+				/><path d="M5 12l6 -6" /></svg
+			>
+		</div>
 		<span>
 			{SITUATIONS[situation].name}
 		</span>
